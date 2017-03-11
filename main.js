@@ -20,6 +20,7 @@ function get() {
 get().then((data) => {
     ws = new WorldState(data);
     switch(process.argv[3]) {
-        case "alerts": console.log(JSON.stringify(ws.alerts))
+        case "alerts": console.log(JSON.stringify(ws.alerts)); break;
+        case "fissures": console.log(JSON.stringify(ws.fissures)); break;
     }
 })
